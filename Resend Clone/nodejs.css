@@ -1,0 +1,259 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white ;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color:yellowgreen;
+  }
+  
+  .nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav ul li {
+    display: inline;
+  }
+  
+  .nav ul li a {
+    color: yellowgreen;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav ul li a:hover {
+    color: #ff6347; /* Optional: Add a hover effect */
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  .introduction p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  
+  .introduction h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2; /* Adjust the line-height for better spacing */
+  }
+  
+  .introduction h1 span {
+    display: block; /* Ensures "Developers" is on its own line */
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 80px;
+    position: flex;
+    bottom: 60px;
+  }
+  
+  .btn{
+    background-color: cyan;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #ff6347; /* Optional: Add a hover effect */
+    color: white;
+  }
+  
+  .footer {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding-bottom: 20px;
+  }
+  
+  .footer hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    width: 80%;
+    margin: 0 auto;
+  }
+  .btn-2 {
+    background-color: none;
+    color: black;
+    padding-left: 10px 250px; 
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .btn:hover, .btn-signin-nav:hover {
+    background-color: #ff6347; /* Optional: Add a hover effect */
+    color:cyan;
+  }
+  
+  .footer {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding-bottom: 20px;
+  }
+  
+  .footer hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    width: 80%;
+    margin: 20px auto;
+  }
+  .trust-text {
+    margin: 20px 0;
+    font-size: 18px;
+  }
+  
+  .logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  .logo-img {
+    max-height: 50px;
+    max-width: 100px;
+  }
+  .integration-section {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .integration-img {
+    padding-top: 100px;
+    max-width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .integration-title {
+    font-size: 69px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: yellow;
+  }
+  
+  .integration-description {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #888888;
+  }
+  .language-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .language-buttons .btn {
+    margin: 5px;
+  }
+   /* button */
+.btn-2 {
+    margin: 100px;
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+  }
+  .btn-2::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  /* glow */
+  .btn-2::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .btn-2:hover::before {
+    opacity: 1;
+  }
+  
+  .btn-2:active:after {
+    background: transparent;
+  }
+  
+  .btn-2:active {
+    color: #000;
+    font-weight: bold;
+  }
